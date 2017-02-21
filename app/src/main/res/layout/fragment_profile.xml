@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f0f4"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/profile_bg"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/slider4"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:civ_border_width="1dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center_vertical"
+                    app:civ_border_color="@android:color/white"
+                    android:src="@drawable/profile"/>
+                <!--如果宽度为Match_parent则居中不起作用-->
+
+                <TextView
+                    android:id="@+id/profile_tv_username"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_vertical"
+                    android:text="我的邮箱"/>
+                <ImageView
+                    android:id="@+id/login_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/right_arrow_white_32"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:background="@android:color/white"
+                android:id="@+id/profile_lv1"
+                android:layout_below="@+id/profile_bg"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:dividerHeight="0.5dp"
+                android:divider="@drawable/list_divider"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:background="@android:color/white"
+                android:id="@+id/profile_lv2"
+                android:layout_below="@+id/profile_lv1"
+                android:layout_marginTop="15dp"
+                android:dividerHeight="1dp"
+                android:divider="@drawable/list_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_below="@+id/profile_lv2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="登录/注册"
+                android:textSize="18sp"
+                android:layout_margin="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/search_bg"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

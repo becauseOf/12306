@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiangsong.ticket">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- ></activity>这样写会报错！！！！ -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".view.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.RemainTicketActivity"
+            android:parentActivityName=".view.activity.MainActivity"
+            android:theme="@style/AppThemeSame.NoActionBar" />
+        <activity
+            android:name=".view.activity.BuyTicketActivity"
+            android:parentActivityName=".view.activity.RemainTicketActivity" />
+        <activity
+            android:name=".view.activity.OrderDetailActivity"
+            android:parentActivityName=".view.activity.MainActivity" />
+        <activity
+            android:name=".view.activity.ProfileDetailActivity"
+            android:parentActivityName=".view.activity.MainActivity" />
+        <activity
+            android:name=".view.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar.ImageTranslucentTheme" />
+        <activity
+            android:name=".view.activity.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar.ImageTranslucentTheme" />
+        <activity android:name=".view.activity.CityNameActivity"
+            android:parentActivityName=".view.activity.MainActivity"/>
+    </application>
+
+</manifest>

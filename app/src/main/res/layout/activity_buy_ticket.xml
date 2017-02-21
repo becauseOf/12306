@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#edecf3"
+    tools:context="com.xiangsong.ticket.view.activity.BuyTicketActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/toolbar_title"
+                android:layout_height="wrap_content"
+                android:text="K1263"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_heder"
+        android:layout_width="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:background="@drawable/buy_ticket_bg"
+        android:layout_height="wrap_content">
+
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/start_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/start_date"
+            android:text="长沙"
+            android:textSize="25sp"
+            />
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/start_date"
+            android:id="@+id/right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/order_detail_right_arrow"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/end_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="长沙"
+            android:layout_below="@id/start_date"
+            android:textSize="25sp"
+            />
+
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/start_station"
+            android:text="23:30"
+            android:textSize="25sp"
+            />
+
+
+
+        <!--同时使用android:layout_toRightOf和layout_alignParentRight会使得组件被拉长-->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="10:07"
+            android:layout_below="@id/start_station"
+            android:textSize="25sp"
+            />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_head"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryTransparent"
+        android:gravity="center"
+        android:layout_below="@+id/rela_heder"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/buy_ticket_tv_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:textColor="@android:color/white"
+            android:text="前一天"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/calender_white"/>
+        <TextView
+            android:id="@+id/date"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="09月22日周四"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/bottom_arrow"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/buy_ticket_tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="后一天"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/buy_tickte_lv"
+        android:layout_marginTop="20dp"
+        android:divider="@drawable/buy_ticket_divider"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white"
+        android:layout_below="@+id/linear_head"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

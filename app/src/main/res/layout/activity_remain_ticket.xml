@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edecf3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.xiangsong.ticket.view.activity.RemainTicketActivity">
+
+
+    <!--注意图片不能使用-命名，而必须使用下划线-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/toolbar_title"
+                android:layout_height="wrap_content"
+                android:text="长沙"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_swap"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/toolbar_title1"
+                android:layout_height="wrap_content"
+                android:text="重庆"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_head"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/remain_ticket_tv_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:text="前一天"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/calender_white"/>
+        <TextView
+            android:id="@+id/date"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="09月22日周四"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/bottom_arrow"/>
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/remain_ticket_tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="后一天"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:background="@android:color/transparent"
+        android:id="@+id/remain_ticket_lv"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:dividerHeight="10dp"
+        android:divider="#00000000"
+        android:layout_below="@+id/linear_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

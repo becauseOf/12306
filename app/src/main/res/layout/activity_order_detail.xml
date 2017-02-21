@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#edecf3"
+    tools:context="com.xiangsong.ticket.view.activity.OrderDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/toolbar_title"
+                android:layout_height="wrap_content"
+                android:text="订单详情"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_heder"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/order_detail_bg"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="2016-08-19 周五 开"
+            android:textSize="17sp"
+            />
+
+        <ImageView
+            android:id="@+id/gantanhao"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/shikebiao"
+            android:src="@drawable/gantanhao"/>
+<!--不要同时使用layout_alignParentRight,layout_centerInParent和layout_toRightOf,layout_toLeftOf，layout_below-->
+        <TextView
+            android:id="@+id/shikebiao"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="时刻表"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/start_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/start_date"
+            android:text="长沙"
+            android:textSize="27sp"
+            />
+
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/start_date"
+            android:id="@+id/right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/order_detail_right_arrow"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/end_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="长沙"
+            android:layout_below="@id/start_date"
+            android:textSize="27sp"
+            />
+
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/start_station"
+            android:text="23:30"
+            android:textSize="27sp"
+            />
+
+        <TextView
+            android:id="@+id/train_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/right_arrow"
+            android:layout_centerHorizontal="true"
+            android:text="K109"
+            android:textSize="17sp"
+            />
+
+        <!--同时使用android:layout_toRightOf和layout_alignParentRight会使得组件被拉长-->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:text="10:07"
+            android:layout_below="@id/start_station"
+            android:textSize="27sp"
+            />
+
+        
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/rela_heder"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/order_detail_bg_white"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryTxt"
+            android:text="向松"
+            android:textSize="22sp"
+            />
+
+        <TextView
+            android:id="@+id/ticket_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDividerTxt"
+            android:text="学生票"
+            android:layout_toRightOf="@+id/name"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/seat_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryTxt"
+            android:layout_alignParentRight="true"
+            android:text="13车厢081号"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/name"
+            android:text="¥51"
+            android:layout_marginTop="15dp"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/seat_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryTxt"
+            android:layout_below="@id/seat_num"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:text="硬座"
+            android:textSize="22sp"
+            />
+
+        <!--或者待支付，则后面的改签，退票设置为隐藏状态-->
+        <TextView
+            android:id="@+id/order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMainTxt"
+            android:layout_below="@id/price"
+            android:layout_marginTop="25dp"
+            android:text="待支付"
+            android:textSize="18sp"
+            />
+
+        <ImageView
+            android:layout_marginTop="-10dp"
+            android:id="@+id/gaiqian"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/order_state"
+            android:layout_toLeftOf="@+id/tuipiao"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/profile_feedback"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDividerTxt"
+            android:layout_below="@id/gaiqian"
+            android:layout_alignLeft="@+id/gaiqian"
+            android:layout_marginTop="3dp"
+            android:text="改签"
+            android:textSize="14sp"
+            />
+        <ImageView
+            android:id="@+id/tuipiao"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="-10dp"
+            android:layout_alignTop="@+id/order_state"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tuipiao"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDividerTxt"
+            android:layout_alignLeft="@+id/tuipiao"
+            android:layout_below="@id/tuipiao"
+            android:text="退票"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/order_detail_bg_white"
+        android:orientation="horizontal"
+        android:layout_height="70dp">
+<!--android:text="继续购票"android:text="预定返程"-->
+        <Button
+            android:id="@+id/order_detail_btn_continue_buy"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="取消订单"
+            android:visibility="invisible"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/order_detail_btn_bg"/>
+
+        <Button
+            android:id="@+id/order_detail_btn_buy_convert"
+            android:layout_marginLeft="20dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="立即支付"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/order_detail_btn_bg"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
